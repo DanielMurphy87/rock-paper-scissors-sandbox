@@ -39,16 +39,12 @@ const playGame = () => {
 const updateDOM = (moveOne, moveTwo, outcome) => {
 
   const playerOne = document.getElementById("player-one-move");
-  const imageOne = playerOne.getElementsByTagName("img")[0];
-  imageOne.setAttribute("src", `images/${moveOne}.png`);
-  const playerOneMove = document.getElementById("player-one-move__name");
-  playerOneMove.innerText = moveOne;
+  playerOne.getElementsByTagName("img")[0].setAttribute("src", `images/${moveOne}.png`);
+  document.getElementById("player-one-move__name").innerText = moveOne;
 
   const playerTwo = document.getElementById("player-two-move");
-  const imageTwo = playerTwo.getElementsByTagName("img")[0];
-  imageTwo.setAttribute("src", `images/${moveTwo}.png`);
-  const playerTwoMove = document.getElementById("player-two-move__name");
-  playerTwoMove.innerText = moveTwo;
+  playerTwo.getElementsByTagName("img")[0].setAttribute("src", `images/${moveTwo}.png`);
+  document.getElementById("player-two-move__name").innerText = moveTwo;
 
   const outcomeText = document.getElementById('player-results');
   outcomeText.innerHTML = outcome;
