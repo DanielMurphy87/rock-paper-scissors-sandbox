@@ -65,3 +65,7 @@ body {
   color: var(--primary);
   font-size: 2em;
 }
+
+#reset-btn {
+  display: none;
+}

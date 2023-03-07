@@ -8,7 +8,11 @@
 
   <body>
     <h1>Rock Paper Scissors!</h1>
-    <button class="btn" id="play-btn">Play</button>
+    <div class="container">
+      <button class="btn" id="play-btn">Play</button>
+      <button class="btn" id="reset-btn" value="Reset Game"
+        onclick="resetGame()">Reset</button>
+    </div>
     <div class="container">
       <div class="player-one" id="player-one">
         <h2 class="player">Player One</h2>
@@ -28,9 +32,9 @@
     </div>
     <h1>Results : </h1>
     <div class="results-container" id="container">
-      <p class="results" id="player-results" ></p>
+      <p class="results" id="player-results"></p>
     </div>
-        
+
     <script src="index.js"></script>
   </body>
 </html>

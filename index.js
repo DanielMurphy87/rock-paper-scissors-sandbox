@@ -20,20 +20,18 @@ const getOutcome = (moveOne, moveTwo) => {
   return "Player Two wins!";
 };
 
-// Removing elements (nodes) from the DOM
+// Reload the page from cache
 const resetGame = () => {
-  if (document.getElementById("outcome")) {
-    const outcome = document.body.lastChild;
-    document.body.removeChild(outcome);
-  }
+  location.reload();
 };
 
 const playGame = () => {
-  resetGame();
+  const resetButton = document.getElementById("reset-btn");
   const playerOneMove = getRandomMove();
   const playerTwoMove = getRandomMove();
   const outcome = getOutcome(playerOneMove, playerTwoMove);
   updateDOM(playerOneMove, playerTwoMove, outcome);
+  resetButton.style.display = "block";
 };
 
 const updateDOM = (moveOne, moveTwo, outcome) => {
